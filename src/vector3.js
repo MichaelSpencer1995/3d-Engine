@@ -6,7 +6,7 @@
 // make more sense? Like is there a difference between a regular class and a function that 
 // LITERALLY returns an object like in this case? Somehow I feel like they have slightly different classifications, even though they are technically
 // the same thing. I don't want to pass in my helper functions as a parameter to sub classes for readabilities sake, is there a design
-// pattern that solves this problem? For now referencing this CoordinateTrio class to the sub classes that need it will be
+// pattern that solves this problem? For now referencing this Vector3 class to the sub classes that need it will be
 // sufficient
 
 
@@ -16,7 +16,7 @@
 // how do you have global variables and methods that can be used throughout the application without referencing them in each file that needs them, I guess
 // you have to do it like that?
 
-export class CoordinateTrio {
+export class Vector3 {
     constructor(x, y, z) {
         this.x = x
         this.y = y
