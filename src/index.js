@@ -5,5 +5,4 @@ import { _3dEngine } from './3dEngine.js'
 // the actual element itself, Idk I need to think about this
 
 const app = new _3dEngine('#root')
-
 app.launch()
