@@ -5,11 +5,11 @@ import { Settings } from './settings.js'
 import { Scene } from './scene.js'
 
 export class _3dEngine {
-    #frameStack = new FrameStack()
-    #camera = new Camera()
-    #scene = new Scene()
-    #screen
-    constructor(targetDiv) {
+    private frameStack: FrameStack = new FrameStack()
+    private camera: Camera = new Camera()
+    private scene: Scene = new Scene()
+    private screen: Screen
+    constructor(targetDiv: string) {
         this.screen = new Screen(targetDiv)
     }
     launch() {

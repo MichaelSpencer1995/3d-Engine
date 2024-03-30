@@ -1,11 +1,12 @@
 import { Settings } from './settings.js'
 
 export class Screen {
-    constructor(targetDiv) {
+    private targetDiv: string
+    constructor(targetDiv: string) {
         this.targetDiv = targetDiv
     }
     init() {
-        let $screen = document.querySelector(this.targetDiv)
+        let $screen = document.querySelector(this.targetDiv)!
 
         for(let i = 0; i < Settings.viewPortHeight; i++) {
             let $row = document.createElement('div')

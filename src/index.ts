@@ -4,5 +4,8 @@ import { _3dEngine } from './3dEngine.js'
 // to see, ah, you pass the the element selector in where you want this 3d engine to take place, as opposed to how react passes in the
 // the actual element itself, Idk I need to think about this
 
+// when and why to type variables?
+//end statements with semicolons or not and why?
+
 const app = new _3dEngine('#root')
 app.launch()

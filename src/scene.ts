@@ -2,7 +2,7 @@ import { Vector3 } from "./vector3.js"
 
 export class Scene {
     // I simply hardcoded in the vertices of this purple 3x3x3 cube with center at 0, 0, 0 that I wanted to render
-    #entities = [
+    private entities = [
         {
             id: "Cube",
             color: "Purple",
@@ -17,8 +17,8 @@ export class Scene {
                 new Vector3(-1.5, -1.5, -1.5)
             ]
         }
-        ]
+    ]
     genEntities() {
-        return this.#entities
+        return this.entities
     }
 }
