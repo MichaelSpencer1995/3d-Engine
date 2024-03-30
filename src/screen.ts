@@ -11,11 +11,13 @@ export class Screen {
 
         for(let i = 0; i < Settings.viewPortHeight; i++) {
             let $row = document.createElement('div')
-            $row.classList.add('row')
+            $row.style.display = 'flex'
 
             for(let j = 0; j < Settings.viewPortWidth; j++) {
                 let $pixel = document.createElement('div')
-                $pixel.classList.add('pixel')
+                $pixel.style.width = Settings.pixelSize + 'px'
+                $pixel.style.height = Settings.pixelSize + 'px'
+                $pixel.style.background = Settings.background
                 $row.appendChild($pixel)
             }
             $screen.appendChild($row)
