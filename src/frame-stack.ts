@@ -4,7 +4,7 @@ export class FrameStack {
     logStack() {
         console.log(this.stack)
     }
-    addFrameToStack(frame) {
+    addFrameToStack(frame: number) {
         this.stack.unshift(frame)
     }
     popFrameFromStack() {

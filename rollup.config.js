@@ -4,7 +4,7 @@ import terser from '@rollup/plugin-terser'
 const config = {
     input: 'src/index.ts',
     output: {
-        file: 'dist/umd/3D-Engine.js',
+        file: 'dist/umd/3d-engine.js',
         format: 'umd',
         name: '3D Engine'
     },
@@ -14,7 +14,7 @@ const config = {
 }
 
 if (process.env.BUILD === 'minify') {
-    config.output.file = 'dist/umd/3D-Engine.min.js'
+    config.output.file = 'dist/umd/3d-engine.min.js'
     config.plugins.push(terser())
 }
 

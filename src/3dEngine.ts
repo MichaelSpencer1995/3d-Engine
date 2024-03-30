@@ -15,7 +15,7 @@ export class _3dEngine {
     launch() {
         this.screen.init()
         console.log(this.scene.genEntities())
-        // this.screen.renderFrame(this.frameStack.popFrameFromStack())
-        // this.frameStack.logStack()
+        this.screen.renderFrame(this.frameStack.popFrameFromStack()!)
+        this.frameStack.logStack()
     }
 }

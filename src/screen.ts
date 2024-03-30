@@ -1,5 +1,6 @@
 import { Settings } from './settings.js'
 
+
 export class Screen {
     private targetDiv: string
     constructor(targetDiv: string) {
@@ -20,7 +21,7 @@ export class Screen {
             $screen.appendChild($row)
         }
     }
-    renderFrame(frame) {
+    renderFrame(frame: number) {
         console.log('render this frame ', frame)
     }
 }
