@@ -1,5 +1,4 @@
-import { Settings } from './settings.js'
-
+import { Settings } from './settings'
 
 export class Screen {
     private targetDiv: string
@@ -9,11 +8,11 @@ export class Screen {
     init() {
         let $screen = document.querySelector(this.targetDiv)!
 
-        for(let i = 0; i < Settings.viewPortHeight; i++) {
+        for(let i = 0; i < Settings.windowSize; i++) {
             let $row = document.createElement('div')
             $row.style.display = 'flex'
 
-            for(let j = 0; j < Settings.viewPortWidth; j++) {
+            for(let j = 0; j < Settings.windowSize; j++) {
                 let $pixel = document.createElement('div')
                 $pixel.style.width = Settings.pixelSize + 'px'
                 $pixel.style.height = Settings.pixelSize + 'px'

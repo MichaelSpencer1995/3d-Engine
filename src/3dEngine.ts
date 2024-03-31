@@ -1,13 +1,15 @@
-import { Screen } from './screen.js'
-import { FrameStack } from './frame-stack.js'
-import { Camera } from './camera.js'
-import { Settings } from './settings.js'
-import { Scene } from './scene.js'
+import { Screen } from './screen'
+import { FrameStack } from './frame-stack'
+import { Camera } from './camera'
+import { Settings } from './settings'
+import { Scene } from './scene'
+import { Calculations } from './calculations'
 
 export class _3dEngine {
     private frameStack: FrameStack = new FrameStack()
     private camera: Camera = new Camera()
     private scene: Scene = new Scene()
+    private calculations: Calculations = new Calculations()
     private screen: Screen
     constructor(targetDiv: string) {
         this.screen = new Screen(targetDiv)
@@ -17,5 +19,9 @@ export class _3dEngine {
         console.log(this.scene.genEntities())
         this.screen.renderFrame(this.frameStack.popFrameFromStack()!)
         this.frameStack.logStack()
+        console.log('point on line' , this.calculations.getPointOnLine(this.camera.getLinePoints(), 0.5))
+        console.log('point on line' , this.calculations.getPointOnLine(this.camera.getLinePoints(), 0.84))
+        console.log('point on line' , this.calculations.getPointOnLine(this.camera.getLinePoints(), 1.12))
+        console.log('point on line' , this.calculations.getPointOnLine(this.camera.getLinePoints(), 1.55))
     }
 }

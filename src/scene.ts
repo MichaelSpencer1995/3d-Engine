@@ -1,4 +1,4 @@
-import { Vector3 } from "./vector3.js"
+import { Vector3 } from "./vector3"
 
 export class Scene {
     // I simply hardcoded in the vertices of this purple 3x3x3 cube with center at 0, 0, 0 that I wanted to render
