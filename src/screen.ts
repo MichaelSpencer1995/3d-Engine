@@ -1,12 +1,8 @@
 import { Settings } from './settings'
 
-export class Screen {
-    private targetDiv: string
-    constructor(targetDiv: string) {
-        this.targetDiv = targetDiv
-    }
-    init() {
-        let $screen = document.querySelector(this.targetDiv)!
+class _Screen {
+    init(elementSelector: string) {
+        let $screen = document.querySelector(elementSelector)!
 
         for(let i = 0; i < Settings.windowSize; i++) {
             let $row = document.createElement('div')
@@ -26,3 +22,5 @@ export class Screen {
         console.log('render this frame ', frame)
     }
 }
+
+export const Screen = new _Screen()

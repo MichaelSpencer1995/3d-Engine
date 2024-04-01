@@ -1,8 +1,7 @@
 import { PointIn3dSpace } from "./pointIn3dSpace"
 import { VectorForm } from "./vectorForm"
 
-
-export class Calculations {
+class _Calculations {
     getPointOnLine(pointsOnLine: PointIn3dSpace[], t: number, returnLengthOfT: boolean) {
         // parametric equation of a line
         // The Math Sorcerer on youtube best resource found thus far
@@ -37,7 +36,7 @@ export class Calculations {
             )
         )
     }
-    getPointOnLineXDistanceFromOnePoint(pointsOnLine: PointIn3dSpace[], x: number) {
+    getPointOnLineXDistanceFromOnePoint(pointOnLine: PointIn3dSpace, vectorForm: VectorForm, x: number) {
         // I don't think this function will be used, just made it to help me better conceptualize
         // the math I had to learn to make this application, and sort of self affirm that I am understanding/visualizing
         // everything correctly \m/ 0_0 \m/
@@ -50,3 +49,8 @@ export class Calculations {
         // a ( x − x 1 ) + b ( y − y 1 ) + c ( z − z 1 ) = 0.
     }
 }
+
+
+export const Calculations = new _Calculations()
+// so which ever file I import this Calculations, will always be referring to this one instance of Calculations right?
+// is this the idea of a singleton? I don't like the syntax of a singleton though how it is like invoking itself.
