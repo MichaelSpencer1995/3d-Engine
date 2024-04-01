@@ -6,12 +6,7 @@ import { Scene } from './scene'
 import { Calculations } from './calculations'
 
 
-export default class _3dEngine {
-    // I know for a certain I want to use the end user to use the syntax:
-           // const app = new _3dEngine('#root')'
-           // and
-           // app.launch()
-    // so therefor I am required to set the element string as a property of the _3dEngine right?
+export default class Entry {
     private $root: string
     private settings?: SettingsInterface
     constructor(targetDiv: string, settings?: SettingsInterface) {
@@ -19,12 +14,7 @@ export default class _3dEngine {
         this.settings = settings
     }
     private setSettings() {
-        // have to check again if settings because TS isn't smart enough to figure
-        // out that the only way to get into this function is if the settings check below passed
-        // it still thinks this.settings could be undefined if I go straight into, this.settings.windowSize etc
-        // but I don't want to remove the if check in the launch function because that is where it rightly belongs for understandabilities sake
-        // do other languages have this issue to or is it unique to typescript?
-        // am I missing something here?
+        // have to check again if(settings){} because TS isn't smart enough to figur out that the only way to get into this function is if the settings check below passed it still thinks this.settings could be undefined if I go straight into, this.settings.windowSize etc but I don't want to remove the if check in the launch function because that is where it rightly belongs for understandabilities sake do other languages have this issue to or is it unique to typescript? am I missing something here?
         if(this.settings) {
             if(this.settings.windowSize) {
                 Settings.setWindowSize(this.settings.windowSize)

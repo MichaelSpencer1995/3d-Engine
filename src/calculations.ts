@@ -52,5 +52,3 @@ class _Calculations {
 
 
 export const Calculations = new _Calculations()
-// so which ever file I import this Calculations, will always be referring to this one instance of Calculations right?
-// is this the idea of a singleton? I don't like the syntax of a singleton though how it is like invoking itself.
