@@ -19,9 +19,6 @@ export default class _3dEngine {
         console.log(this.scene.genEntities())
         this.screen.renderFrame(this.frameStack.popFrameFromStack()!)
         this.frameStack.logStack()
-        console.log('point on line' , this.calculations.getPointOnLine(this.camera.getLinePoints(), 0.5))
-        console.log('point on line' , this.calculations.getPointOnLine(this.camera.getLinePoints(), 0.84))
-        console.log('point on line' , this.calculations.getPointOnLine(this.camera.getLinePoints(), 1.12))
-        console.log('point on line' , this.calculations.getPointOnLine(this.camera.getLinePoints(), 1.55))
+        console.log('point on line' , this.calculations.getPointOnLine(this.camera.getLinePoints(), 1))
     }
 }
