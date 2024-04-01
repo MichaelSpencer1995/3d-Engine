@@ -14,8 +14,13 @@ export class Calculations {
     getDistanceBetweenTwoPoints(points: PointIn3dSpace[]) {
         // distance between p1 (x, y, z) and p2 (x, y, z)
         // p = √((x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2)
-        let distance
-        return distance
+        return (
+            Math.sqrt(
+                (Math.pow(points[0].x - points[1].x, 2)) +
+                (Math.pow(points[0].y - points[1].y, 2)) +
+                (Math.pow(points[0].z - points[1].z, 2))
+            )
+        )
     }
     equationOfPlane() {
         // If we know the normal vector of a plane and a point passing through the plane,
