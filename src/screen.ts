@@ -4,15 +4,15 @@ class _Screen {
     init(elementSelector: string) {
         let $screen = document.querySelector(elementSelector)!
 
-        for(let i = 0; i < Settings.windowSize; i++) {
+        for(let i = 0; i < Settings.getWindowSize(); i++) {
             let $row = document.createElement('div')
             $row.style.display = 'flex'
 
-            for(let j = 0; j < Settings.windowSize; j++) {
+            for(let j = 0; j < Settings.getWindowSize(); j++) {
                 let $pixel = document.createElement('div')
-                $pixel.style.width = Settings.pixelSize + 'px'
-                $pixel.style.height = Settings.pixelSize + 'px'
-                $pixel.style.background = Settings.background
+                $pixel.style.width = Settings.getPixelSize() + 'px'
+                $pixel.style.height = Settings.getPixelSize() + 'px'
+                $pixel.style.background = Settings.getBackground()
                 $row.appendChild($pixel)
             }
             $screen.appendChild($row)

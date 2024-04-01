@@ -9,7 +9,11 @@
     <div id="root"></div>
 <script type="text/javascript" src="./dist/umd/3d-engine.min.js"></script>
 <script>
-    const app = new _3dEngine('#root')
+    const settings = {
+        background: "#999",
+    }
+
+    const app = new _3dEngine('#root', settings)
     app.launch()
 </script>
 </body>
