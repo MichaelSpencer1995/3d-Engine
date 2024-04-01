@@ -6,7 +6,7 @@ const config = {
     output: {
         file: 'dist/umd/3d-engine.js',
         format: 'umd',
-        name: '3D Engine'
+        name: '_3dEngine'
     },
     plugins: [
         typescript()
