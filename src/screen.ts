@@ -1,6 +1,6 @@
 import { Settings } from './settings'
 
-class ScreenClass {
+class _Screen {
     public init(elementSelector: string) {
         let $screen = document.querySelector(elementSelector)!
 
@@ -23,4 +23,4 @@ class ScreenClass {
     }
 }
 
-export const Screen = new ScreenClass()
+export const Screen = new _Screen()

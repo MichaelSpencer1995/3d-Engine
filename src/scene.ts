@@ -1,20 +1,20 @@
-import { PointIn3dSpaceClass } from "./pointIn3dSpace"
+import { PointIn3dSpace } from "./pointIn3dSpace"
 
-export class SceneClass {
+export class Scene {
     // I simply hardcoded in the vertices of this purple 3x3x3 cube with center at 0, 0, 0 that I wanted to render
     private entities = [
         {
             id: "Cube",
             color: "Purple",
             vertices: [
-                new PointIn3dSpaceClass(1.5, 1.5, 1.5),
-                new PointIn3dSpaceClass(1.5, 1.5, -1.5),
-                new PointIn3dSpaceClass(1.5, -1.5, 1.5),
-                new PointIn3dSpaceClass(1.5, -1.5, -1.5),
-                new PointIn3dSpaceClass(-1.5, 1.5, 1.5),
-                new PointIn3dSpaceClass(-1.5, 1.5, -1.5),
-                new PointIn3dSpaceClass(-1.5, -1.5, 1.5),
-                new PointIn3dSpaceClass(-1.5, -1.5, -1.5)
+                new PointIn3dSpace(1.5, 1.5, 1.5),
+                new PointIn3dSpace(1.5, 1.5, -1.5),
+                new PointIn3dSpace(1.5, -1.5, 1.5),
+                new PointIn3dSpace(1.5, -1.5, -1.5),
+                new PointIn3dSpace(-1.5, 1.5, 1.5),
+                new PointIn3dSpace(-1.5, 1.5, -1.5),
+                new PointIn3dSpace(-1.5, -1.5, 1.5),
+                new PointIn3dSpace(-1.5, -1.5, -1.5)
             ]
         }
     ]

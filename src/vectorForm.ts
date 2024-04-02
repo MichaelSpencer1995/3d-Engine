@@ -1,4 +1,4 @@
-export class VectorFormClass {
+export class VectorForm {
     a: number
     b: number
     c: number

@@ -1,4 +1,4 @@
-export class FrameStackClass {
+export class FrameStack {
     private stack = [0, 1, 2, 3, 4, 5]
 
     public logStack() {

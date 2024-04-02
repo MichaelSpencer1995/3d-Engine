@@ -6,7 +6,7 @@ export interface SettingsInterface {
     cameraPoints?: number[][]
 }
 
-class SettingsClass {
+class _Settings {
     private windowSize: number
     private pixelSize: number
     private background: string
@@ -47,7 +47,7 @@ class SettingsClass {
     }
 }
 
-export const Settings = new SettingsClass()
+export const Settings = new _Settings()
 
 
 //  Software Architecture 

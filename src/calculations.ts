@@ -1,8 +1,8 @@
-import { PointIn3dSpaceClass } from "./pointIn3dSpace"
-import { VectorFormClass } from "./vectorForm"
+import { PointIn3dSpace } from "./pointIn3dSpace"
+import { VectorForm } from "./vectorForm"
 
-class CalculationsClass {
-    public getPointOnLine(point: PointIn3dSpaceClass, vectorForm: VectorFormClass, t: number, returnLengthOfT: boolean) {
+class _Calculations {
+    public getPointOnLine(point: PointIn3dSpace, vectorForm: VectorForm, t: number, returnLengthOfT: boolean) {
         // parametric equation of a line
         // The Math Sorcerer on youtube best resource found thus far
 
@@ -12,22 +12,22 @@ class CalculationsClass {
         let yoT = point.y + (vectorForm.b * t)
         let zoT = point.z + (vectorForm.c * t)
 
-        // let point = new PointIn3dSpaceClass(xoT, yoT, zoT)
+        // let point = new PointIn3dSpace(xoT, yoT, zoT)
 
         // if(returnLengthOfT) {
         //     return this.getDistanceBetweenTwoPoints([pointsOnLine[0], point])
         // }
-        return new PointIn3dSpaceClass(xoT, yoT, zoT)
+        return new PointIn3dSpace(xoT, yoT, zoT)
     }
-    public getVectorForm(pointsOnLine: PointIn3dSpaceClass[]) {
-        return new VectorFormClass(
+    public getVectorForm(pointsOnLine: PointIn3dSpace[]) {
+        return new VectorForm(
             (pointsOnLine[0].x - pointsOnLine[1].x),
             (pointsOnLine[0].y - pointsOnLine[1].y),
             (pointsOnLine[0].z - pointsOnLine[1].z),
             this.getDistanceBetweenTwoPoints(pointsOnLine)
         )
     }
-    public getDistanceBetweenTwoPoints(points: PointIn3dSpaceClass[]) {
+    public getDistanceBetweenTwoPoints(points: PointIn3dSpace[]) {
         // equation for distance between 2 points in 3d space
         // p = √((x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2)
         return (
@@ -38,7 +38,7 @@ class CalculationsClass {
             )
         )
     }
-    public getPointOnLineXDistanceFromOnePoint(pointOnLine: PointIn3dSpaceClass, vectorForm: VectorFormClass, x: number) {
+    public getPointOnLineXDistanceFromOnePoint(pointOnLine: PointIn3dSpace, vectorForm: VectorForm, x: number) {
         let coefficient = x / vectorForm.t
         return this.getPointOnLine(pointOnLine, vectorForm, coefficient, false)
         // return this.getDistanceBetweenTwoPoints()
@@ -58,4 +58,4 @@ class CalculationsClass {
 }
 
 
-export const Calculations = new CalculationsClass()
+export const Calculations = new _Calculations()

@@ -1,8 +1,8 @@
 import { Settings, SettingsInterface } from './settings'
 import { Screen } from './screen'
-import { FrameStackClass } from './frame-stack'
+import { FrameStack } from './frame-stack'
 import { Camera } from './camera'
-import { SceneClass } from './scene'
+import { Scene } from './scene'
 import { Calculations } from './calculations'
 
 
