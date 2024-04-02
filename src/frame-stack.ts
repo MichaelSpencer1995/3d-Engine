@@ -1,13 +1,13 @@
-export class FrameStack {
+export class FrameStackClass {
     private stack = [0, 1, 2, 3, 4, 5]
 
-    logStack() {
+    public logStack() {
         console.log(this.stack)
     }
-    addFrameToStack(frame: number) {
+    public addFrameToStack(frame: number) {
         this.stack.unshift(frame)
     }
-    popFrameFromStack() {
+    public popFrameFromStack() {
         return this.stack.pop()
     }
 }

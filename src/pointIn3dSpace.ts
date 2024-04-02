@@ -1,4 +1,4 @@
-export class PointIn3dSpace {
+export class PointIn3dSpaceClass {
     x: number
     y: number
     z: number

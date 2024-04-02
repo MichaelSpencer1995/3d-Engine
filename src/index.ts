@@ -1,8 +1,8 @@
 import { Settings, SettingsInterface } from './settings'
 import { Screen } from './screen'
-import { FrameStack } from './frame-stack'
+import { FrameStackClass } from './frame-stack'
 import { Camera } from './camera'
-import { Scene } from './scene'
+import { SceneClass } from './scene'
 import { Calculations } from './calculations'
 
 
@@ -30,18 +30,24 @@ export default class Entry {
             }
         }
     }
-    launch() {
+    public launch() {
         if(this.settings) {
             this.setSettings()
         }
-        console.log('settings: ', Settings)
         Screen.init(this.$root)
+        // console.log(Camera.getVectorForm())
+        console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 5))
+        console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 6))
+        console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 7))
+        console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 8))
+        console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 9))
         // console.log(this.scene.genEntities())
         // this.screen.renderFrame(this.frameStack.popFrameFromStack()!)
         // this.frameStack.logStack()
-        console.log('point on line: ' , Calculations.getPointOnLine(Camera.getPoints(), 1, false))
-        console.log('distance of T: ' , Calculations.getPointOnLine(Camera.getPoints(), 1, false))
-        console.log('distance between 2 points: ', Calculations.getDistanceBetweenTwoPoints(Camera.getPoints()))
-        console.log('vector form of camera: ', Camera.getVectorForm())
+        // console.log('point on line: ' , Calculations.lineEquation(Camera.getPoints(), 1, false))
+        // console.log('point on line: ' , Calculations.lineEquation(0, Camera.getPoints(), 1, true))
+        // console.log('distance between 2 points: ', Calculations.getDistanceBetweenTwoPoints(Camera.getPoints()))
+        // console.log('vector form of camera: ', Camera.getVectorForm())
+        // console.log('point x away from point', Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[0], Camera.getVectorForm(), 2))
     }
 }

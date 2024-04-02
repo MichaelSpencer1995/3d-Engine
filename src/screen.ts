@@ -1,7 +1,7 @@
 import { Settings } from './settings'
 
-class _Screen {
-    init(elementSelector: string) {
+class ScreenClass {
+    public init(elementSelector: string) {
         let $screen = document.querySelector(elementSelector)!
 
         for(let i = 0; i < Settings.getWindowSize(); i++) {
@@ -18,9 +18,9 @@ class _Screen {
             $screen.appendChild($row)
         }
     }
-    renderFrame(frame: number) {
+    public renderFrame(frame: number) {
         console.log('render this frame ', frame)
     }
 }
 
-export const Screen = new _Screen()
+export const Screen = new ScreenClass()
