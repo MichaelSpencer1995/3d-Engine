@@ -1,25 +1,42 @@
+import { _Frame } from './frame'
 import { Settings } from './settings'
 
 class _Screen {
+    private $elements: HTMLElement[][]
+    constructor() {
+        this.$elements = []
+    }
     public init(elementSelector: string) {
         let $screen = document.querySelector(elementSelector)!
 
-        for(let i = 0; i < Settings.getWindowSize(); i++) {
+        for(let i = 0; i < Settings._windowSize; i++) {
+            let row: HTMLElement[] = []
             let $row = document.createElement('div')
             $row.style.display = 'flex'
-
-            for(let j = 0; j < Settings.getWindowSize(); j++) {
+            for(let j = 0; j < Settings._windowSize; j++) {
                 let $pixel = document.createElement('div')
-                $pixel.style.width = Settings.getPixelSize() + 'px'
-                $pixel.style.height = Settings.getPixelSize() + 'px'
-                $pixel.style.background = Settings.getBackground()
+                row.push($pixel)
+                $pixel.style.width = Settings._pixelSize + 'px'
+                $pixel.style.height = Settings._pixelSize + 'px'
+                $pixel.style.background = Settings._background
                 $row.appendChild($pixel)
             }
+            this.$elements.push(row)
             $screen.appendChild($row)
         }
     }
-    public renderFrame(frame: number) {
+    get _$elements() {
+        return this.$elements
+    }
+    public renderFrame(frame: _Frame) {
         console.log('render this frame ', frame)
+
+        for(let i = 0; i < Settings._windowSize; i++) {
+            for(let j = 0; j < Settings._windowSize; j++) {
+                // console.log(frame[i][j])
+                this.$elements[i][j].style.background = frame.getPixel(i, j)
+            }
+        }
     }
 }
 

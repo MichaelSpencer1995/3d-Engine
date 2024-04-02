@@ -7,12 +7,15 @@
 </head>
 <body>
     <div id="root"></div>
-<!-- <script type="text/javascript" src="./dist/umd/3d-engine.min.js"></script> -->
-<script type="text/javascript" src="https://unpkg.com/3d-engine"></script>
+<script type="text/javascript" src="./dist/umd/3d-engine.min.js"></script>
+<!-- <script type="text/javascript" src="https://unpkg.com/3d-engine"></script> -->
 
 <script>
     const settings = {
-        background: "#999"
+        background: "#ccc",
+        fps: -1,
+        windowSize: 50,
+        pixelSize: 4
     }
 
     const app = new _3dEngine('#root', settings)

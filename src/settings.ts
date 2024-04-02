@@ -21,28 +21,34 @@ class _Settings {
         // this.cameraPoints = [[3, 4, 0.2], [0, 0, 0]]
         // this.cameraPoints = [[0, 0, 0], [6, 8, 0]]
     }
-    public getWindowSize() {
+    get _windowSize() {
         return this.windowSize
     }
-    public getPixelSize() {
+    get _pixelSize() {
         return this.pixelSize
     }
-    public getBackground() {
+    get _background() {
         return this.background
     }
-    public getCameraPoints() {
+    get _fps() {
+        return this.fps
+    }
+    get _cameraPoints() {
         return this.cameraPoints
     }
-    public setWindowSize(size: number) {
+    set _windowSize(size: number) {
         this.windowSize = size
     }
-    public setPixelSize(size: number) {
+    set _pixelSize(size: number) {
         this.pixelSize = size
     }
-    public setBackground(color: string) {
+    set _background(color: string) {
         this.background = color
     }
-    public setCameraPoints(points: number[][]) {
+    set _fps(fps: number) {
+        this.fps = fps
+    }
+    set _cameraPoints(points: number[][]) {
         this.cameraPoints = points
     }
 }
