@@ -50,6 +50,7 @@ class CalculationsClass {
         
     }
     public equationOfPlane() {
+        
         // If we know the normal vector of a plane and a point passing through the plane,
         // the equation of the plane is established.
         // a ( x − x 1 ) + b ( y − y 1 ) + c ( z − z 1 ) = 0.

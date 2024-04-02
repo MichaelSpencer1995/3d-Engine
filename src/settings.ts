@@ -17,7 +17,8 @@ class SettingsClass {
         this.pixelSize = 3
         this.background = '#ccc'
         this.fps = 20
-        this.cameraPoints = [[3, 4, 0.2], [0, 0, 0]]
+        this.cameraPoints = [[3, 3, 0.1], [0, 0, 0]]
+        // this.cameraPoints = [[3, 4, 0.2], [0, 0, 0]]
         // this.cameraPoints = [[0, 0, 0], [6, 8, 0]]
     }
     public getWindowSize() {

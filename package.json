@@ -1,5 +1,5 @@
 {
-    "name": "3d-engine",
+    "name": "3d-engine-ms95",
     "version": "1.0.0",
     "description": "Javascript 3D Rendering Software I made for fun",
     "author": {
@@ -17,5 +17,8 @@
         "@rollup/plugin-typescript": "^9.0.2",
         "rollup": "^2.79.1",
         "typescript": "^4.9.5"
-    }
+    },
+    "files": [
+        "./dist/umd/3d-engine.min.js"
+    ]
 }
