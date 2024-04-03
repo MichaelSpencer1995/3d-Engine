@@ -35,28 +35,13 @@ export default class _Entry {
         if(this.settings) {
             this.setSettings()
         }
-        console.log(Settings)
         Screen.init(this.$root)
-        // console.log(Camera.getVectorForm())
-        // console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 5))
-        // console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 6))
-        // console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 7))
-        // console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 8))
-        // console.log(Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[1], Camera.getVectorForm(), 9))
-        FrameStack.addFrameToStack(new _Frame(this.createDummyFrame()))
+        FrameStack.addFrameToStack(new _Frame(this.createDummyFrameData()))
         FrameStack.logStack()
         Screen.renderFrame(FrameStack.popFrameFromStack()!)
         console.log('elements' , Screen._$elements)
-        // console.log(this.scene.genEntities())
-        // this.screen.renderFrame(this.frameStack.popFrameFromStack()!)
-        // this.frameStack.logStack()
-        // console.log('point on line: ' , Calculations.lineEquation(Camera.getPoints(), 1, false))
-        // console.log('point on line: ' , Calculations.lineEquation(0, Camera.getPoints(), 1, true))
-        // console.log('distance between 2 points: ', Calculations.getDistanceBetweenTwoPoints(Camera.getPoints()))
-        // console.log('vector form of camera: ', Camera.getVectorForm())
-        // console.log('point x away from point', Calculations.getPointOnLineXDistanceFromOnePoint(Camera.getPoints()[0], Camera.getVectorForm(), 2))
     }
-    public createDummyFrame() {
+    public createDummyFrameData() {
         const coloredPixels = [
             // these just need to be in order
             [10, 12],

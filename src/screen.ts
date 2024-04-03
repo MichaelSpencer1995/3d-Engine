@@ -29,11 +29,8 @@ class _Screen {
         return this.$elements
     }
     public renderFrame(frame: _Frame) {
-        console.log('render this frame ', frame)
-
         for(let i = 0; i < Settings._windowSize; i++) {
             for(let j = 0; j < Settings._windowSize; j++) {
-                // console.log(frame[i][j])
                 this.$elements[i][j].style.background = frame.getPixel(i, j)
             }
         }
