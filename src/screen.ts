@@ -19,6 +19,7 @@ class _Screen {
                 $pixel.style.width = Settings._pixelSize + 'px'
                 $pixel.style.height = Settings._pixelSize + 'px'
                 $pixel.style.background = Settings._background
+                $pixel.style.boxSizing = 'border-box'
                 $row.appendChild($pixel)
             }
             this.$elements.push(row)

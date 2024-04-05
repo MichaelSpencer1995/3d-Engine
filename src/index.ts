@@ -14,8 +14,17 @@ export default class _Entry {
         this.$root = targetDiv
         this.settings = settings
     }
+    public launch() {
+        if(this.settings) {
+            this.setSettings()
+        }
+        Screen.init(this.$root)
+        FrameStack.addFrameToStack(new _Frame(this.createDummyFrameData()))
+        FrameStack.logStack()
+        Screen.renderFrame(FrameStack.popFrameFromStack()!)
+        console.log('elements' , Screen._$elements)
+    }
     private setSettings() {
-        // have to check again if(settings){} because TS isn't smart enough to figur out that the only way to get into this function is if the settings check below passed it still thinks this.settings could be undefined if I go straight into, this.settings.windowSize etc but I don't want to remove the if check in the launch function because that is where it rightly belongs for understandabilities sake do other languages have this issue to or is it unique to typescript? am I missing something here?
         if(this.settings) {
             if(this.settings.windowSize) {
                 Settings._windowSize = this.settings.windowSize
@@ -30,16 +39,6 @@ export default class _Entry {
                 Settings._fps = this.settings.fps
             }
         }
-    }
-    public launch() {
-        if(this.settings) {
-            this.setSettings()
-        }
-        Screen.init(this.$root)
-        FrameStack.addFrameToStack(new _Frame(this.createDummyFrameData()))
-        FrameStack.logStack()
-        Screen.renderFrame(FrameStack.popFrameFromStack()!)
-        console.log('elements' , Screen._$elements)
     }
     public createDummyFrameData() {
         const coloredPixels = [
