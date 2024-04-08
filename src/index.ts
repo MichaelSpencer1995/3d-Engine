@@ -5,6 +5,7 @@ import { Camera } from './camera'
 import { Scene } from './scene'
 import { Calculations } from './calculations'
 import { _Frame } from './frame'
+import { PointIn3dSpace } from './pointIn3dSpace'
 
 
 export default class _Entry {
@@ -15,14 +16,11 @@ export default class _Entry {
         this.settings = settings
     }
     public launch() {
-        if(this.settings) {
-            this.setSettings()
-        }
+        this.setSettings()
         Screen.init(this.$root)
+        Camera.init()
         FrameStack.addFrameToStack(new _Frame(this.createDummyFrameData()))
-        FrameStack.logStack()
         Screen.renderFrame(FrameStack.popFrameFromStack()!)
-        console.log('elements' , Screen._$elements)
     }
     private setSettings() {
         if(this.settings) {

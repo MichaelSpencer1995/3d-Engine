@@ -1,35 +1,31 @@
 import { PointIn3dSpace } from "./pointIn3dSpace"
-import { VectorForm } from "./vectorForm"
+import { NormalizedVectorForm } from "./normalizedVectorForm"
 
 class _Calculations {
-    public getPointOnLine(point: PointIn3dSpace, vectorForm: VectorForm, t: number, returnLengthOfT: boolean) {
-        // parametric equation of a line
-        // The Math Sorcerer on youtube best resource found thus far
-
-        // let vectorForm = this.getVectorForm(pointsOnLine)
-        // console.log(vectorForm)
-        let xoT = point.x + (vectorForm.a * t)
-        let yoT = point.y + (vectorForm.b * t)
-        let zoT = point.z + (vectorForm.c * t)
-
-        // let point = new PointIn3dSpace(xoT, yoT, zoT)
-
-        // if(returnLengthOfT) {
-        //     return this.getDistanceBetweenTwoPoints([pointsOnLine[0], point])
-        // }
-        return new PointIn3dSpace(xoT, yoT, zoT)
-    }
-    public getVectorForm(pointsOnLine: PointIn3dSpace[]) {
-        return new VectorForm(
-            (pointsOnLine[0].x - pointsOnLine[1].x),
-            (pointsOnLine[0].y - pointsOnLine[1].y),
-            (pointsOnLine[0].z - pointsOnLine[1].z),
-            this.getDistanceBetweenTwoPoints(pointsOnLine)
+    public getPointOnLine(point: PointIn3dSpace, normalizedVectorForm: NormalizedVectorForm, distance: number) {
+        return new PointIn3dSpace(
+            point.x + normalizedVectorForm.a * distance,
+            point.y + normalizedVectorForm.b * distance,
+            point.z + normalizedVectorForm.c * distance
         )
     }
+    public dotProduct(vectors: NormalizedVectorForm[]) {
+        let vector1 = vectors[0]
+        let vector2 = vectors[1]
+
+    }
+    public getNormalizedVectorForm(pointsOnLine: PointIn3dSpace[]) {
+        let x = pointsOnLine[0].x - pointsOnLine[1].x
+        let y = pointsOnLine[0].y - pointsOnLine[1].y
+        let z = pointsOnLine[0].z - pointsOnLine[1].z
+        let length = this.getDistanceBetweenTwoPoints(pointsOnLine)
+        let nX = x / length
+        let nY = y / length
+        let nZ = z / length
+
+        return new NormalizedVectorForm(nX, nY, nZ)
+    }
     public getDistanceBetweenTwoPoints(points: PointIn3dSpace[]) {
-        // equation for distance between 2 points in 3d space
-        // p = √((x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2)
         return (
             Math.sqrt(
                 (Math.pow(points[0].x - points[1].x, 2)) +
@@ -38,22 +34,15 @@ class _Calculations {
             )
         )
     }
-    public getPointOnLineXDistanceFromOnePoint(pointOnLine: PointIn3dSpace, vectorForm: VectorForm, x: number) {
-        let coefficient = x / vectorForm.t
-        return this.getPointOnLine(pointOnLine, vectorForm, coefficient, false)
-        // return this.getDistanceBetweenTwoPoints()
-        // I don't think this function will be used, just made it to help me better conceptualize
-        // the math I had to learn to make this application, and sort of self affirm that I am understanding/visualizing
-        // everything correctly \m/ 0_0 \m/
-        // Also, I am almost certain a good Mathemetician could show me the better way to do this.
-        // this.getPointOnLine(pointsOnLine)
-        
+    public getPointOnLineXDistanceFromOnePoint(pointOnLine: PointIn3dSpace, normalizedVectorForm: NormalizedVectorForm, distance: number) {
+        // return this.getPointOnLine(pointOnLine, normalizedVectorForm, distance)
+        // return 
     }
+
     public equationOfPlane() {
-        
-        // If we know the normal vector of a plane and a point passing through the plane,
-        // the equation of the plane is established.
-        // a ( x − x 1 ) + b ( y − y 1 ) + c ( z − z 1 ) = 0.
+    }
+    public getCamerasVectors() {
+
     }
 }
 

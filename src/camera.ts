@@ -1,6 +1,6 @@
 import { Settings } from "./settings"
 import { PointIn3dSpace } from "./pointIn3dSpace"
-import { VectorForm } from "./vectorForm"
+import { NormalizedVectorForm } from "./normalizedVectorForm"
 import { Calculations } from "./calculations"
 
 class _Camera {
@@ -8,13 +8,15 @@ class _Camera {
         new PointIn3dSpace(Settings._cameraPoints[0][0], Settings._cameraPoints[0][1], Settings._cameraPoints[0][2]),
         new PointIn3dSpace(Settings._cameraPoints[1][0], Settings._cameraPoints[1][1], Settings._cameraPoints[1][2])
     ]
-    private vectorForm: VectorForm = Calculations.getVectorForm(this.points)
+    private normalizedVectorForm: NormalizedVectorForm = Calculations.getNormalizedVectorForm(this.points)
+    public init() {
 
+    }
     public getPoints() {
         return this.points
     }
-    public getVectorForm() {
-        return this.vectorForm
+    public getNormalizedVectorForm() {
+        return this.normalizedVectorForm
     }
 }
 
