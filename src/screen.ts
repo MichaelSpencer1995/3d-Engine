@@ -29,7 +29,7 @@ class _Screen {
     get _$elements() {
         return this.$elements
     }
-    public renderFrame(frame: _Frame) {
+    public drawFrame(frame: _Frame) {
         for(let i = 0; i < Settings._windowSize; i++) {
             for(let j = 0; j < Settings._windowSize; j++) {
                 this.$elements[i][j].style.background = frame.getPixel(i, j)

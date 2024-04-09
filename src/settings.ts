@@ -13,10 +13,10 @@ class _Settings {
     private fps: number
     private cameraPoints: number[][]
     constructor() {
-        this.windowSize = 100
-        this.pixelSize = 3
-        this.background = '#ccc'
-        this.fps = 20
+        this.windowSize = 150
+        this.pixelSize = 2
+        this.background = '#999'
+        this.fps = -1
         // this.cameraPoints = [[3, 3, 0.1], [0, 0, 0]]
         this.cameraPoints = [[3, 4, 0], [0, 0, 0]]
         // this.cameraPoints = [[3, 4, 0.2], [0, 0, 0]]
@@ -51,6 +51,20 @@ class _Settings {
     }
     set _cameraPoints(points: number[][]) {
         this.cameraPoints = points
+    }
+    public setSettings(settings: SettingsInterface) {
+        if(settings.windowSize) {
+            this._windowSize = settings.windowSize
+        }
+        if(settings.pixelSize) {
+            this._pixelSize = settings.pixelSize
+        }
+        if(settings.background) {
+            this._background = settings.background
+        }
+        if(settings.fps) {
+            this._fps = settings.fps
+        }
     }
 }
 
