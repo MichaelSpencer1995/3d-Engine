@@ -44,6 +44,9 @@ class _Calculations {
     public getCamerasVectors() {
 
     }
+    public sideFinder() {
+        
+    }
 }
 
 

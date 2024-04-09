@@ -1,6 +1,10 @@
+interface Pixel {
+    background?: string
+}
+
 export class _Frame {
-    private frame: string[][]
-    constructor(frameData: string[][]) {
+    private frame: Pixel[][]
+    constructor(frameData: Pixel[][]) {
         this.frame = frameData
     }
     get _frame() {
