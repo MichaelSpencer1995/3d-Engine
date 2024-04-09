@@ -1,6 +1,6 @@
-import { _PixelToColor } from './blueprints/pixel-to-color'
-import { Scene } from './scene'
-import { Settings } from './settings'
+import { _PixelToColor } from "../blueprints/pixel-to-color"
+import { Settings } from "../config/settings"
+import { Scene } from "./scene"
 
 class _Renderer {
     public createDummyFrameData() {

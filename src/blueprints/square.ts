@@ -1,4 +1,4 @@
-import { _Vertex } from "../vertex"
+import { _Vertex } from "../not-sure-what-to-name/vertex"
 import { _PixelToColor } from "./pixel-to-color"
 
 export class _Square {

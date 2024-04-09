@@ -1,4 +1,4 @@
-import { _Frame } from "./frame"
+import { _Frame } from "../not-sure-what-to-name/frame"
 
 class _FrameStack {
     private stack: _Frame[]

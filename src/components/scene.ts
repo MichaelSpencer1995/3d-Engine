@@ -1,6 +1,5 @@
-import { _Square } from "./blueprints/square"
-import { PointIn3dSpace } from "./pointIn3dSpace"
-import { _Vertex } from "./vertex"
+import { _Square } from "../blueprints/square"
+import { _Vertex } from "../not-sure-what-to-name/vertex"
 
 class _Scene {
     private entities = [

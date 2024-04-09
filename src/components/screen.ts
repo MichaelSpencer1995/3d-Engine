@@ -1,5 +1,5 @@
-import { _Frame } from './frame'
-import { Settings } from './settings'
+import { Settings } from "../config/settings"
+import { _Frame } from "../not-sure-what-to-name/frame"
 
 class _Screen {
     private $elements: HTMLElement[][]

@@ -1,5 +1,5 @@
-import { PointIn3dSpace } from "./pointIn3dSpace"
-import { NormalizedVectorForm } from "./normalizedVectorForm"
+import { NormalizedVectorForm } from "../not-sure-what-to-name/normalizedVectorForm"
+import { PointIn3dSpace } from "../not-sure-what-to-name/pointIn3dSpace"
 
 class _Calculations {
     public getPointOnLine(point: PointIn3dSpace, normalizedVectorForm: NormalizedVectorForm, distance: number) {

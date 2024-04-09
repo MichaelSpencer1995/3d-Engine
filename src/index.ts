@@ -1,12 +1,9 @@
-import { Settings, SettingsInterface } from './settings'
-import { Screen } from './screen'
-import { FrameStack } from './frame-stack'
-import { Camera } from './camera'
-import { Scene } from './scene'
-import { Calculations } from './calculations'
-import { _Frame } from './frame'
-import { PointIn3dSpace } from './pointIn3dSpace'
-import { Renderer } from './renderer'
+import { Screen } from './components/screen'
+import { Camera } from './components/camera'
+import { FrameStack } from './components/frame-stack'
+import { Renderer } from './components/renderer'
+import { Settings, SettingsInterface } from './config/settings'
+import { _Frame } from './not-sure-what-to-name/frame'
 
 export default class _Entry {
     private $root: string
