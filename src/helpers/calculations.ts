@@ -1,7 +1,19 @@
 import { NormalizedVectorForm } from "../not-sure-what-to-name/normalizedVectorForm"
 import { PointIn3dSpace } from "../not-sure-what-to-name/pointIn3dSpace"
+import { _Vertex } from "../not-sure-what-to-name/vertex"
 
 class _Calculations {
+    public getSlopeLine2d(points: _Vertex[]) {
+        let m = (points[0].y - points[1].y) / (points[0].x - points[1].x)
+        let b = points[0].y - (m * points[0].x)
+        return [m, b]
+    }
+    public rotate2d(origin: number[], point: number[], theta: number) {
+        return [
+            ((point[0] - origin[0]) * Math.cos(theta)) - ((point[1] - origin[1]) * Math.sin(theta)) + origin[0],
+            ((point[0] - origin[0]) * Math.sin(theta)) + ((point[1] - origin[1]) * Math.cos(theta)) + origin[1]
+        ]
+    }
     public getPointOnLine(point: PointIn3dSpace, normalizedVectorForm: NormalizedVectorForm, distance: number) {
         return new PointIn3dSpace(
             point.x + normalizedVectorForm.a * distance,

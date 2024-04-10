@@ -4,6 +4,7 @@ import { FrameStack } from './components/frame-stack'
 import { Renderer } from './components/renderer'
 import { Settings, SettingsInterface } from './config/settings'
 import { _Frame } from './not-sure-what-to-name/frame'
+import { EventHandler } from './components/event-handler'
 
 export default class _Entry {
     private $root: string
@@ -16,10 +17,13 @@ export default class _Entry {
         if(this.settings) {
             Settings.setSettings(this.settings)
         }
-        console.log("Settings: ", Settings)
         Screen.init(this.$root)
         Camera.init()
         FrameStack.addFrameToStack(new _Frame(Renderer.createDummyFrameData()))
-        Screen.drawFrame(FrameStack.popFrameFromStack()!)
+        setInterval(() => {
+            Screen.drawFrame(FrameStack.popFrameFromStack()!)
+            console.log('hello world')
+        }, 50)
+        EventHandler.setMouseListener()
     }
 }
