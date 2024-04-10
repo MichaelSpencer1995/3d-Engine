@@ -14,6 +14,12 @@ class _Screen {
         $screenCover.style.height = '100%'
         $screenCover.style.background = 'transparent'
         $screenCover.style.position = 'absolute'
+        $screenCover.innerHTML = "Click anywhere to rotate vertices"
+        $screenCover.style.fontSize = '16px'
+        $screenCover.style.fontWeight = 'bold'
+        $screenCover.style.fontFamily = 'Helvetica'
+        $screenCover.style.color = 'rgb(30 30 30)'
+        $screenCover.style.userSelect = 'none'
         // $screenCover.addEventListener('mousedown', () => EventHandler.mouseDown())
         // $screenCover.addEventListener('mouseup', () => EventHandler.mouseUp())
         $screenCover.addEventListener('click', () => EventHandler.click())
