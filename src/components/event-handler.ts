@@ -5,7 +5,7 @@ import { Scene } from "./scene"
 import { Screen } from "./screen"
 
 class _EventHandler {
-    private rotation = 0.05
+    private rotation = 0.1
     private keyDown = false
     private clock: number = setInterval(() => {}, 999)
     public init() {
