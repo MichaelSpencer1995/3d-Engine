@@ -27,10 +27,10 @@ export class _Square {
     private calculatePixels() {
         this.pixels = []
         const pixels = [
-            new _PixelToColor(Math.trunc(this.points[0].x), Math.trunc(this.points[0].y), 'red'),
-            new _PixelToColor(Math.trunc(this.points[1].x), Math.trunc(this.points[1].y), 'yellow'),
-            new _PixelToColor(Math.trunc(this.points[2].x), Math.trunc(this.points[2].y), 'blue'),
-            new _PixelToColor(Math.trunc(this.points[3].x), Math.trunc(this.points[3].y), 'green')
+            new _PixelToColor(Math.round(this.points[0].x), Math.round(this.points[0].y), 'red'),
+            new _PixelToColor(Math.round(this.points[1].x), Math.round(this.points[1].y), 'yellow'),
+            new _PixelToColor(Math.round(this.points[2].x), Math.round(this.points[2].y), 'blue'),
+            new _PixelToColor(Math.round(this.points[3].x), Math.round(this.points[3].y), 'green')
         ]
         pixels.forEach(pixel => {
             this.pixels.push(pixel)
@@ -40,11 +40,11 @@ export class _Square {
     private addSides() {
         let result = Calculations.getSlopeLine2d([this.points[0], this.points[1]])
         console.log('y = ' + result[0] + 'x + ' + result[1])
-        let y = (result[0] * (this.points[0].x + 1)) + result[1]
+        let x = (this.points[0].x + 1) - (this.points[0].x - this.points[1].x)
+        let y = (result[0] * (x)) + result[1]
         this.pixels.push(
-            new _PixelToColor(Math.trunc(this.points[0].x + 1), Math.trunc(y), 'purple')
-        )
-        
+            new _PixelToColor(Math.round(x), Math.round(y), 'purple')
+        )  
     }
     public getPixelLocations() {
         return this.pixels
