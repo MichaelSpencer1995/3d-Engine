@@ -14,16 +14,9 @@ export default class _Entry {
         this.settings = settings
     }
     public launch() {
-        if(this.settings) {
-            Settings.setSettings(this.settings)
-        }
+        Settings.setSettings(this.settings)
         Screen.init(this.$root)
         Camera.init()
-        FrameStack.addFrameToStack(new _Frame(Renderer.createDummyFrameData()))
-        setInterval(() => {
-            Screen.drawFrame(FrameStack.popFrameFromStack()!)
-            console.log('hello world')
-        }, 50)
-        EventHandler.setMouseListener()
+        FrameStack.init()
     }
 }

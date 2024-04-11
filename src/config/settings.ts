@@ -52,7 +52,10 @@ class _Settings {
     set _cameraPoints(points: number[][]) {
         this.cameraPoints = points
     }
-    public setSettings(settings: SettingsInterface) {
+    public setSettings(settings?: SettingsInterface) {
+        if(!settings) {
+            return
+        }
         if(settings.windowSize) {
             this._windowSize = settings.windowSize
         }
