@@ -18,7 +18,7 @@ class _Screen {
         $screenCover.style.fontSize = '16px'
         $screenCover.style.fontWeight = 'bold'
         $screenCover.style.fontFamily = 'Helvetica'
-        $screenCover.style.color = 'rgb(30 30 30)'
+        $screenCover.style.color = '#ccc'
         $screenCover.style.userSelect = 'none'
         // $screenCover.addEventListener('mousedown', () => EventHandler.mouseDown())
         // $screenCover.addEventListener('mouseup', () => EventHandler.mouseUp())

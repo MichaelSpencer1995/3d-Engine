@@ -15,7 +15,7 @@ class _Settings {
     constructor() {
         this.windowSize = 150
         this.pixelSize = 2
-        this.background = '#ccc'
+        this.background = '#000'
         this.fps = -1
         // this.cameraPoints = [[3, 3, 0.1], [0, 0, 0]]
         this.cameraPoints = [[3, 4, 0], [0, 0, 0]]
