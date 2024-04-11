@@ -3,7 +3,7 @@ import { Camera } from './components/camera'
 import { FrameStack } from './components/frame-stack'
 import { Renderer } from './components/renderer'
 import { Settings, SettingsInterface } from './config/settings'
-import { _Frame } from './not-sure-what-to-name/frame'
+import { _Frame } from './structures/frame'
 import { EventHandler } from './components/event-handler'
 
 export default class _Entry {

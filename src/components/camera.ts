@@ -1,7 +1,7 @@
 import { Settings } from "../config/settings"
 import { Calculations } from "../helpers/calculations"
-import { NormalizedVectorForm } from "../not-sure-what-to-name/normalizedVectorForm"
-import { PointIn3dSpace } from "../not-sure-what-to-name/pointIn3dSpace"
+import { NormalizedVectorForm } from "../structures/normalizedVectorForm"
+import { PointIn3dSpace } from "../structures/pointIn3dSpace"
 
 class _Camera {
     private points: PointIn3dSpace[] = [

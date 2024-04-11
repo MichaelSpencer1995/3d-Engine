@@ -20,6 +20,6 @@
     },
     "files": [
         "dist/**/*"
-      ],
+    ],
     "unpkg": "dist/umd/3d-engine.min.js"
 }

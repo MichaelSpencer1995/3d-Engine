@@ -1,6 +1,6 @@
-import { NormalizedVectorForm } from "../not-sure-what-to-name/normalizedVectorForm"
-import { PointIn3dSpace } from "../not-sure-what-to-name/pointIn3dSpace"
-import { _Vertex } from "../not-sure-what-to-name/vertex"
+import { NormalizedVectorForm } from "../structures/normalizedVectorForm"
+import { PointIn3dSpace } from "../structures/pointIn3dSpace"
+import { _Vertex } from "../structures/vertex"
 
 class _Calculations {
     public getSlopeLine2d(points: _Vertex[]) {

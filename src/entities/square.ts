@@ -1,9 +1,9 @@
 import { FrameStack } from "../components/frame-stack"
 import { Renderer } from "../components/renderer"
 import { Calculations } from "../helpers/calculations"
-import { _Frame } from "../not-sure-what-to-name/frame"
-import { _Vertex } from "../not-sure-what-to-name/vertex"
-import { _PixelToColor } from "./pixel-to-color"
+import { _Frame } from "../structures/frame"
+import { _Vertex } from "../structures/vertex"
+import { _PixelToColor } from "../structures/pixel-to-color"
 
 export class _Square {
     name: string

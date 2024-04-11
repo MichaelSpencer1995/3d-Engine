@@ -1,5 +1,5 @@
-import { _Square } from "../blueprints/square"
-import { _Vertex } from "../not-sure-what-to-name/vertex"
+import { _Square } from "../entities/square"
+import { _Vertex } from "../structures/vertex"
 
 class _Scene {
     public entities = [

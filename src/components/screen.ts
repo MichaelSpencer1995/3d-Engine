@@ -1,5 +1,5 @@
 import { Settings } from "../config/settings"
-import { _Frame } from "../not-sure-what-to-name/frame"
+import { _Frame } from "../structures/frame"
 import { EventHandler } from "./event-handler"
 
 class _Screen {
