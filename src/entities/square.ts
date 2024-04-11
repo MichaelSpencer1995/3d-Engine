@@ -38,15 +38,27 @@ export class _Square {
         this.addSides()
     }
     private addSides() {
-        let result = Calculations.getSlopeLine2d([this.points[0], this.points[1]])
-        // let x = (this.points[0].x + 1) - (this.points[0].x - this.points[1].x)
-        // let y = (result[0] * (x)) + result[1]
-        let x = this.points[0].x - ((this.points[0].x - this.points[1].x) / 2)
-        let y = (result[0] * (x)) + result[1]
+        let result0 = Calculations.getSlopeLine2d([this.points[0], this.points[1]])
+        let result1 = Calculations.getSlopeLine2d([this.points[1], this.points[2]])
+        let result2 = Calculations.getSlopeLine2d([this.points[2], this.points[3]])
+        let result3 = Calculations.getSlopeLine2d([this.points[3], this.points[0]])
 
-        this.pixels.push(
-            new _PixelToColor(Math.round(x), Math.round(y), 'purple')
-        )  
+        let x0 = this.points[0].x - ((this.points[0].x - this.points[1].x) / 2)
+        let y0 = (result0[0] * (x0)) + result0[1]
+
+        let x1 = this.points[1].x - ((this.points[1].x - this.points[2].x) / 2)
+        let y1 = (result1[0] * (x1)) + result1[1]
+
+        let x2 = this.points[2].x - ((this.points[2].x - this.points[3].x) / 2)
+        let y2 = (result2[0] * (x2)) + result2[1]
+
+        let x3 = this.points[3].x - ((this.points[3].x - this.points[0].x) / 2)
+        let y3 = (result3[0] * (x3)) + result3[1]
+
+        this.pixels.push(new _PixelToColor(Math.round(x0), Math.round(y0), 'purple'))
+        this.pixels.push(new _PixelToColor(Math.round(x1), Math.round(y1), 'orange'))
+        this.pixels.push(new _PixelToColor(Math.round(x2), Math.round(y2), 'brown'))
+        this.pixels.push(new _PixelToColor(Math.round(x3), Math.round(y3), 'navy'))
     }
     public getPixelLocations() {
         return this.pixels

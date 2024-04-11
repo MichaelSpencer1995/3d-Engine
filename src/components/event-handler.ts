@@ -17,7 +17,7 @@ class _EventHandler {
             this.clock = setInterval(() => {
                 Scene.entities[0].rotate(this.rotation)
                 Screen.drawFrame(FrameStack.popFrameFromStack()!)
-            }, 75)
+            }, 1)
         })
         window.addEventListener('keyup', (e) => {
             if(e.code != 'Space') {
