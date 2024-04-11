@@ -14,7 +14,7 @@ class _Screen {
         $screenCover.style.height = '100%'
         $screenCover.style.background = 'transparent'
         $screenCover.style.position = 'absolute'
-        $screenCover.innerHTML = "Click anywhere to rotate vertices"
+        $screenCover.innerHTML = 'Hold space to rotate these vertices'
         $screenCover.style.fontSize = '16px'
         $screenCover.style.fontWeight = 'bold'
         $screenCover.style.fontFamily = 'Helvetica'
@@ -22,9 +22,7 @@ class _Screen {
         $screenCover.style.userSelect = 'none'
         // $screenCover.addEventListener('mousedown', () => EventHandler.mouseDown())
         // $screenCover.addEventListener('mouseup', () => EventHandler.mouseUp())
-        $screenCover.addEventListener('click', () => EventHandler.click())
         $screen.appendChild($screenCover)
-        console.log('test')
 
         for(let i = 0; i < Settings._windowSize; i++) {
             let row: HTMLElement[] = []

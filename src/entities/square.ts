@@ -39,9 +39,11 @@ export class _Square {
     }
     private addSides() {
         let result = Calculations.getSlopeLine2d([this.points[0], this.points[1]])
-        console.log('y = ' + result[0] + 'x + ' + result[1])
-        let x = (this.points[0].x + 1) - (this.points[0].x - this.points[1].x)
+        // let x = (this.points[0].x + 1) - (this.points[0].x - this.points[1].x)
+        // let y = (result[0] * (x)) + result[1]
+        let x = this.points[0].x - ((this.points[0].x - this.points[1].x) / 2)
         let y = (result[0] * (x)) + result[1]
+
         this.pixels.push(
             new _PixelToColor(Math.round(x), Math.round(y), 'purple')
         )  
@@ -55,7 +57,6 @@ export class _Square {
             this.points[i].x = newPos[0]
             this.points[i].y = newPos[1]
         }
-        console.log('new points', this.points)
         this.calculatePixels()
         FrameStack.addFrameToStack(new _Frame(Renderer.createDummyFrameData()))
     }

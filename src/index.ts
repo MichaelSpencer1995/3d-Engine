@@ -3,11 +3,12 @@ import { Camera } from './components/camera'
 import { FrameStack } from './components/frame-stack'
 import { Settings, SettingsInterface } from './config/settings'
 import { _Frame } from './structures/frame'
+import { EventHandler } from './components/event-handler'
 
 export default class _Entry {
     private $root: string
-    private settings?: SettingsInterface
-    constructor(targetDiv: string, settings?: SettingsInterface) {
+    private settings: SettingsInterface
+    constructor(targetDiv: string, settings: SettingsInterface) {
         this.$root = targetDiv
         this.settings = settings
     }
@@ -16,5 +17,6 @@ export default class _Entry {
         Screen.init(this.$root)
         Camera.init()
         FrameStack.init()
+        EventHandler.init()
     }
 }

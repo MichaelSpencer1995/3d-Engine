@@ -9,16 +9,10 @@ class _FrameStack {
     }
     public init() {
         this.addFrameToStack(new _Frame(Renderer.createDummyFrameData()))
-        setInterval(() => {
-            Screen.drawFrame(FrameStack.popFrameFromStack()!)
-        }, 75)
-    }
-    public logStack() {
-        console.log(this.stack)
+        Screen.drawFrame(FrameStack.popFrameFromStack()!)
     }
     public addFrameToStack(frame: _Frame) {
         this.stack.unshift(frame)
-        console.log('frame stack: ', this.stack)
     }
     public popFrameFromStack() {
         return this.stack.pop()
