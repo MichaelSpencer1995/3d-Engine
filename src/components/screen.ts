@@ -8,20 +8,24 @@ class _Screen {
         this.$elements = []
     }
     public init(elementSelector: string) {
-        let $screen = document.querySelector(elementSelector)!
+        let $screen = document.querySelector<HTMLElement>(elementSelector)!
+        $screen.style.position = 'relative'
         let $screenCover = document.createElement('div')
         $screenCover.style.width = '100%'
         $screenCover.style.height = '100%'
         $screenCover.style.background = 'transparent'
         $screenCover.style.position = 'absolute'
-        $screenCover.innerHTML = 'Hold space to rotate these vertices'
         $screenCover.style.fontSize = '16px'
-        $screenCover.style.fontWeight = 'bold'
+        $screenCover.style.fontWeight = '100'
         $screenCover.style.fontFamily = 'Helvetica'
         $screenCover.style.color = '#ccc'
         $screenCover.style.userSelect = 'none'
         // $screenCover.addEventListener('mousedown', () => EventHandler.mouseDown())
         // $screenCover.addEventListener('mouseup', () => EventHandler.mouseUp())
+        let $devText = document.createElement('div')
+        $devText.innerHTML = 'Hold space to rotate these vertices'
+        $devText.style.padding = '15px 20px'
+        $screenCover.appendChild($devText)
         $screen.appendChild($screenCover)
 
         for(let i = 0; i < Settings._windowSize; i++) {

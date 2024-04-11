@@ -1,11 +1,10 @@
 import { _Frame } from "../structures/frame"
 import { FrameStack } from "./frame-stack"
-import { Renderer } from "./renderer"
 import { Scene } from "./scene"
 import { Screen } from "./screen"
 
 class _EventHandler {
-    private rotation = 0.1
+    private rotation = -0.1
     private keyDown = false
     private clock: number = setInterval(() => {}, 999)
     public init() {
