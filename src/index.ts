@@ -1,4 +1,5 @@
 import { Screen } from './components/screen'
+import { Scene, EntityInterface } from './components/scene'
 import { Camera } from './components/camera'
 import { FrameStack } from './components/frame-stack'
 import { Settings, SettingsInterface } from './config/settings'
@@ -16,6 +17,7 @@ export default class _Entry {
         Settings.setSettings(this.settings)
         Screen.init(this.$root)
         Camera.init()
+        Scene.init()
         FrameStack.init()
         EventHandler.init()
     }

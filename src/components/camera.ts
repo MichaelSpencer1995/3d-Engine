@@ -1,5 +1,5 @@
 import { Settings } from "../config/settings"
-import { Calculations } from "../helpers/calculations"
+import { Calculations } from "../dependencies/calculations"
 import { NormalizedVectorForm } from "../structures/normalizedVectorForm"
 import { PointIn3dSpace } from "../structures/pointIn3dSpace"
 

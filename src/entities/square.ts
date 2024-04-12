@@ -1,6 +1,6 @@
 import { FrameStack } from "../components/frame-stack"
 import { Renderer } from "../components/renderer"
-import { Calculations } from "../helpers/calculations"
+import { Calculations } from "../dependencies/calculations"
 import { _Frame } from "../structures/frame"
 import { _Vertex } from "../structures/vertex"
 import { _PixelToColor } from "../structures/pixel-to-color"

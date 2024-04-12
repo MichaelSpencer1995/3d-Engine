@@ -6,15 +6,24 @@
     <title>3d Engine</title>
 </head>
 <body style="margin: 0; background: #000;">
-    <div style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
         <div id="root" style="border: #fff 3px solid"></div>
     </div>
 <script type="text/javascript" src="./dist/umd/3d-engine.min.js"></script>
+<!-- <script type="text/javascript" src="https://unpkg.com/3d-engine"></script> -->
 
 <script>
     const settings = {
-        // background: "#cdcdcd",
-        // pixelSize: 1
+        background: '#000',
+        windowSize: 180,
+        entities: [
+            {
+                type: 'square',
+                id: '001',
+                width: 30,
+                center: [(180 / 2), (180 / 2)]
+            }
+        ]
     }
 
     const app = new _3dEngine('#root', settings)

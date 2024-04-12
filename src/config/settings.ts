@@ -1,9 +1,12 @@
+import { EntityInterface } from "../components/scene"
+
 export interface SettingsInterface {
     windowSize?: number
     pixelSize?: number
     background?: string
     fps?: number
-    cameraPoints?: number[][]
+    cameraPoints?: number[][],
+    entities?: EntityInterface[]
 }
 
 class _Settings {
@@ -12,11 +15,20 @@ class _Settings {
     private background: string
     private fps: number
     private cameraPoints: number[][]
+    private entities: EntityInterface[]
     constructor() {
         this.windowSize = 150
         this.pixelSize = 2
-        this.background = '#000'
+        this.background = '#ccc'
         this.fps = -1
+        this.entities = [
+            {
+                type: 'square',
+                id: '001',
+                width: 10,
+                center: [(150 / 2), (150 / 2)]
+            }
+        ]
         // this.cameraPoints = [[3, 3, 0.1], [0, 0, 0]]
         this.cameraPoints = [[3, 4, 0], [0, 0, 0]]
         // this.cameraPoints = [[3, 4, 0.2], [0, 0, 0]]
@@ -36,6 +48,12 @@ class _Settings {
     }
     get _cameraPoints() {
         return this.cameraPoints
+    }
+    get _entities() {
+        return this.entities
+    }
+    set _entities(entities: EntityInterface[]) {
+        this.entities = entities
     }
     set _windowSize(size: number) {
         this.windowSize = size
@@ -67,6 +85,9 @@ class _Settings {
         }
         if(settings.fps) {
             this._fps = settings.fps
+        }
+        if(settings.entities) {
+            this._entities = settings.entities
         }
     }
 }
