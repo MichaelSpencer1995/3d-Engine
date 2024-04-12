@@ -18,6 +18,17 @@ The only required parameter to be passed into the engine is an element selector 
 <div id="root"></div>
 
 <script>
+    const app = new _3dEngine('#root')
+    app.launch()
+</script>
+```
+
+## Settings ##
+
+A second settings parameter is an optional object of settings, usage is shown below.
+
+```html
+<script>
     const settings = {
         background: '#000',
         windowSize: 180,
@@ -34,11 +45,8 @@ The only required parameter to be passed into the engine is an element selector 
     const app = new _3dEngine('#root', settings)
     app.launch()
 </script>
+
 ```
-
-## Settings ##
-
-The second settings object parameter is optional and here are the current settings available.
 
 | `Setting` | Value
 | --- | ---
