@@ -40,6 +40,8 @@ The only required parameter to be passed into the engine is a element selector s
 
 The second settings object parameter is optional and here are the current settings available.
 
+| `Settings` | ---
+| --- | ---
 | background | CSS String for the color of the background
 | windowSize | Size the engine
 | entities | An array of objects, each object will be an entity to be rendered, as of now, the engine only supports 2D squares, pass in type "square", a unique id string, a width, and an array of 2 numbers to define the center of the entity, if no entities property is found on the settings a default square will be rendered.
