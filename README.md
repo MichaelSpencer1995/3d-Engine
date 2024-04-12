@@ -40,7 +40,7 @@ The only required parameter to be passed into the engine is a element selector s
 
 The second settings object parameter is optional and here are the current settings available.
 
-| `Settings` | ---
+| `Setting` | Value
 | --- | ---
 | background | CSS String for the color of the background
 | windowSize | Size the engine
