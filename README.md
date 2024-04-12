@@ -11,7 +11,7 @@ Import the UMD build:
 <script type="text/javascript" src="https://unpkg.com/3d-engine"></script>
 ```
 
-The only required parameter to be passed into the engine is a element selector string, which is the injection site for the engine.
+The only required parameter to be passed into the engine is an element selector string, which is the injection site for the engine.
 
 
 ```html
