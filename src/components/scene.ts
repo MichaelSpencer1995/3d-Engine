@@ -1,4 +1,5 @@
 import { Settings } from "../config/settings"
+import { _Entity } from "../entities/base"
 import { _Square } from "../entities/square"
 import { _Vertex } from "../structures/vertex"
 
@@ -10,7 +11,7 @@ export interface EntityInterface {
 }
 
 class _Scene {
-    public entities: _Square[]
+    public entities: _Entity[]
     constructor() {
         this.entities = []
     }

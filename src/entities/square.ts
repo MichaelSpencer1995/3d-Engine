@@ -4,14 +4,13 @@ import { Calculations } from "../dependencies/calculations"
 import { _Frame } from "../structures/frame"
 import { _Vertex } from "../structures/vertex"
 import { _PixelToColor } from "../structures/pixel-to-color"
+import { _Entity } from "./base"
 
-export class _Square {
-    name: string
-    width: number
-    center: _Vertex
+export class _Square extends _Entity {
     pixels: _PixelToColor[]
     points: _Vertex[]
     constructor(name: string, width: number, center: _Vertex) {
+        super(name, width, center)
         this.name = name
         this.width = width
         this.center = center
@@ -23,6 +22,7 @@ export class _Square {
             new _Vertex(this.center.x, this.center.y - width)
         ]
         this.calculatePixels()
+
     }
     private calculatePixels() {
         this.pixels = []
