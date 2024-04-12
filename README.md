@@ -1,6 +1,6 @@
 # 3D Engine #
 
-3D Rendering Software I am developing with Typescript to run in the browser, for learning and for fun!
+3D Rendering Software I am developing with Typescript to run in the browser, which if it turns out ok, I will probably port to C# or C++ and 'attempt' to optimize to get a better feel for computers and for fun!
 
 
 ## Usage ##
