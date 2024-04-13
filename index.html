@@ -13,15 +13,17 @@
 <!-- <script type="text/javascript" src="https://unpkg.com/3d-engine"></script> -->
 
 <script>
+    const windowSize = 100
     const settings = {
         background: '#000',
-        windowSize: 180,
+        windowSize: windowSize,
+        pixelSize: 3,
         entities: [
             {
                 type: 'square',
                 id: '001',
-                width: 30,
-                center: [(180 / 2), (180 / 2)]
+                width: 20,
+                center: [(windowSize / 2), (windowSize / 2)]
             }
         ]
     }
